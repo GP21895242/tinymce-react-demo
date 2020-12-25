@@ -1,4 +1,4 @@
-import {PluginManager} from 'tinymce';
+import { PluginManager } from 'tinymce';
 import * as Commands from './api/Commands';
 import * as Buttons from './ui/Buttons';
 

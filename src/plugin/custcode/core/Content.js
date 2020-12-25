@@ -1,4 +1,3 @@
-
 export const setContent = function (editor, html) {
   // We get a lovely "Wrong document" error in IE 11 if we
   // don't move the focus to the editor before creating an undo
@@ -16,4 +15,3 @@ export const setContent = function (editor, html) {
 export const getContent = function (editor) {
   return editor.getContent({ source_view: true });
 };
-

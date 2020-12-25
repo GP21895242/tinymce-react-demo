@@ -1,6 +1,4 @@
-
-
-import { getContent, setContent} from '../core/Content';
+import { getContent, setContent } from '../core/Content';
 
 export const open = function (editor) {
   const editorContent = getContent(editor);
@@ -13,30 +11,29 @@ export const open = function (editor) {
       items: [
         {
           type: 'textarea',
-          name: 'code'
-        }
-      ]
+          name: 'code',
+        },
+      ],
     },
     buttons: [
       {
         type: 'cancel',
         name: 'cancel',
-        text: 'Cancel'
+        text: 'Cancel',
       },
       {
         type: 'submit',
         name: 'save',
         text: 'Save',
-        primary: true
-      }
+        primary: true,
+      },
     ],
     initialData: {
-      code: editorContent
+      code: editorContent,
     },
     onSubmit: (api) => {
       setContent(editor, api.getData().code);
       api.close();
-    }
+    },
   });
 };
-
